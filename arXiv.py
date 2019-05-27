@@ -27,7 +27,7 @@ def parse(data, tag):
 
 query = '((abs:medicine)+OR+(abs:medical)+OR+(abs:doctor))+AND+((abs:machine\ learning)+OR+(abs:deep\ learning)+OR+(abs:neural\ network))'
 
-papers = db.collection('papers').get()
+papers = db.collection('papers').stream()
 id_list = []
 for paper in papers:
     id_list.append(paper.id)
