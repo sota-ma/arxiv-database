@@ -40,7 +40,7 @@ counter = 0
 
 for entry in entries:
     url = parse(entry, 'id')[0]
-    if not(url in id_list):
+    if not(url.split('/')[-1] in id_list):
         title = parse(entry, "title")[0]
         date = parse(entry, "published")[0]
         abstract = parse(entry, "summary")[0]
